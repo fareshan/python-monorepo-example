@@ -4,18 +4,17 @@ name: CI libs/fancy
 on:
   pull_request:
     paths:
-      - 'dev-requirements.txt'
-      - 'pip-requirements.txt'
-      - '.github/workflows/python_reusable.yml'
-      - '.github/workflows/ci_fancy.yml'
-      - 'libs/base/**'  # libs/fancy depends on libs/base
-      - 'libs/fancy/**'
-  workflow_dispatch:  # Allows to trigger the workflow manually in GitHub UI
+      - "dev-requirements.txt"
+      - "pip-requirements.txt"
+      - ".github/workflows/ci_python_reusable.yml"
+      - ".github/workflows/ci_fancy.yml"
+      - "libs/base/**" # libs/fancy depends on libs/base
+      - "libs/fancy/**"
+  workflow_dispatch: # Allows to trigger the workflow manually in GitHub UI
 
 jobs:
   ci-libs-fancy:
-    uses:
-      ./.github/workflows/python_reusable.yml
+    uses: ./.github/workflows/ci_python_reusable.yml
     with:
       working-directory: libs/fancy
     secrets: inherit
