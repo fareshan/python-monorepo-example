@@ -9,7 +9,7 @@
 #
 # source .venv/bin/activate
 
-set -x
+set -x # This will print each command to the standard error before executing it, which is useful for debugging scripts.
 
 rm -Rf ".venv"
 python3 -m venv .venv
