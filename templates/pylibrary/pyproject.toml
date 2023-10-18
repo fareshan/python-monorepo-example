@@ -7,14 +7,14 @@ build-backend = "poetry.core.masonry.api"
 [tool.poetry.dependencies]
 
 [tool.poetry.dev-dependencies]
-black = "^22.3.0"
-flake8 = "^4.0.1"
-pytest = "^7.1.2"
-pyright = "^1.1.258"
+black = "^23.10.0"
+flake8 = "^6.1.0"
+pytest = "^7.4.2"
+pyright = "^1.1.332"
 
 [tool.black]
 line-length = 100
-target-version = ['py39']
+target-version = ['py311']
 
 [tool.pyright]
 reportMissingParameterType = true
@@ -24,7 +24,11 @@ strictSetInference = true
 
 [tool.pylint."messages control"]
 disable = "all"
-enable = ["empty-docstring", "missing-module-docstring", "missing-class-docstring", "missing-function-docstring"]
+enable = [
+  "empty-docstring",
+  "missing-module-docstring",
+  "missing-class-docstring",
+  "missing-function-docstring",
+]
 ignore = ["setup.py", "__init__.py"]
 ignore-paths = ["tests"]
-
