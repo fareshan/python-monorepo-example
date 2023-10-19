@@ -7,16 +7,16 @@ CI_FILE_PATH: str = f"../../.github/workflows/ci_{MODULE_NAME}.yml"
 with open(CI_FILE_PATH, "w") as handle:
     handle.writelines(
         f"""---
-name: CI libs/base
+name: CI libs/{PACKAGE_NAME}
 
 on:
   pull_request:
     paths:
-      - 'dev-requirements.txt'
-      - 'pip-requirements.txt'
-      - '.github/workflows/ci_python_reusable.yml'
-      - '.github/workflows/ci_{MODULE_NAME}.yml'
-      - 'libs/{MODULE_NAME}/**'
+      - "dev-requirements.txt"
+      - "pip-requirements.txt"
+      - ".github/workflows/ci_python_reusable.yml"
+      - ".github/workflows/ci_{MODULE_NAME}.yml"
+      - "libs/{MODULE_NAME}/**"
   workflow_dispatch:  # Allows to trigger the workflow manually in GitHub UI
 
 jobs:
