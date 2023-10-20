@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
   pull_request:
   push:
-    branches: main  # Comment this line if you want to test the CI before opening a PR
+    branches: main # Comment this line if you want to test the CI before opening a PR
 
 jobs:
   ci-global:
@@ -20,7 +20,7 @@ jobs:
         timeout-minutes: 5
         with:
           python-version-file: .python-version
-          cache: 'pip'
+          cache: "pip"
           cache-dependency-path: |
             pip-requirements.txt
             dev-requirements.txt
@@ -36,17 +36,13 @@ jobs:
           cookiecutter --no-input templates/pylibrary --output-dir libs/
           git add libs/library_name  # So that checks below apply to generated library
 
-      - name: Format Python imports
-        run: |
-          isort --check-only $(git ls-files "*.py")
-
       - name: Format Python
         run: |
           black --check $(git ls-files "*.py")
 
       - name: Lint Python
         run: |
-          flake8 $(git ls-files "*.py")
+          ruff check --output-format=github $(git ls-files "*.py")
 
       # Are all public symbols documented? (see top-level pyproject.toml configuration)
       - name: Lint Python doc

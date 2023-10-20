@@ -5,7 +5,6 @@
 	"recommendations": [
 		"ms-python.vscode-pylance",
 		"ms-python.black-formatter",
-		"ms-python.isort",
 		"ms-vsliveshare.vsliveshare",
 		"ms-python.pylint",
 		"ms-python.python",
@@ -15,6 +14,7 @@
 	],
 	// List of extensions recommended by VS Code that should not be recommended for users of this workspace.
 	"unwantedRecommendations": [
-		"ms-python.mypy-type-checker" // we chose Pylance instead
+		"ms-python.mypy-type-checker", // we use Pylance instead
+		"ms-python.isort", // we use Ruff
 	]
 }

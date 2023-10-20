@@ -6,10 +6,8 @@ build-backend = "poetry.core.masonry.api"
 name = "mycorp-base"
 version = "0.0.1"
 description = "Shared library"
-authors = [ "Clément Hurlin <clement.hurlin@tweag.io>" ]
-packages = [
-  { include = "mycorp" }
-]
+authors = ["Clément Hurlin <clement.hurlin@tweag.io>"]
+packages = [{ include = "mycorp" }]
 
 [tool.poetry.dependencies]
 python = ">=3.11"
@@ -17,8 +15,7 @@ numpy = ">=1.21"
 
 [tool.poetry.dev-dependencies]
 black = "^23.1.0"
-flake8 = "^6.0.0"
-isort = "^5.12.0"
+ruff = "^0.1.1"
 pylint = "^2.16.3"
 pyright = "^1.1.296"
 pytest = "^7.2.1"
@@ -31,6 +28,11 @@ target-version = ['py39']
 
 [tool.pylint."messages control"]
 disable = "all"
-enable = ["empty-docstring", "missing-module-docstring", "missing-class-docstring", "missing-function-docstring"]
+enable = [
+  "empty-docstring",
+  "missing-module-docstring",
+  "missing-class-docstring",
+  "missing-function-docstring",
+]
 ignore = ["setup.py", "__init__.py"]
 ignore-paths = ["tests"]
