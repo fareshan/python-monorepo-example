@@ -10,7 +10,8 @@
 		"ms-python.python",
 		"github.vscode-github-actions",
 		"ryuta46.multi-command",
-		"charliermarsh.ruff"
+		"charliermarsh.ruff",
+		"njpwerner.autodocstring"
 	],
 	// List of extensions recommended by VS Code that should not be recommended for users of this workspace.
 	"unwantedRecommendations": [

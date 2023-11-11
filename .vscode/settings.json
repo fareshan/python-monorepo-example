@@ -29,5 +29,6 @@
   ],
   "python.analysis.extraPaths": [
     "./libs/base" // fixes false pylance/pyright alert in vscode (reportMissingImport)
-  ]
+  ],
+  "autoDocstring.docstringFormat": "one-line-sphinx"
 }
