@@ -10,10 +10,10 @@ a copy of this repository that is not a fork.
 
 This repository's design is explained on the Tweag blog:
 
-* [Python monorepo; part 1](https://www.tweag.io/blog/2023-04-04-python-monorepo-1/)
+- [Python monorepo; part 1](https://www.tweag.io/blog/2023-04-04-python-monorepo-1/)
   describes the monorepo's structure, how libraries are linked together and which
   tools are used.
-* [Python monorepo; part 2](https://www.tweag.io/blog/2023-07-13-python-monorepo-2)
+- [Python monorepo; part 2](https://www.tweag.io/blog/2023-07-13-python-monorepo-2)
   describes the monorepo's CI, striking a good balance between being easy to use and being
   featureful.
 
@@ -30,3 +30,9 @@ for dependencies _within_ this repository, so that changes to a library are refl
 immediately in code depending on the said library. This implements
 the _live at HEAD_ workflow, a term made popular by
 [Titus Winters](https://www.youtube.com/watch?v=tISy7EJQPzI) from Google.
+
+to do
+
+- dockerfiles
+- logging config
+- clean architecture ?

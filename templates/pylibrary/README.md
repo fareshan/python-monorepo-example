@@ -37,3 +37,8 @@ Run cookiecutter _from the root directory of the monorepo_:
 nix run nixpkgs#cookiecutter -- templates/pylibrary --output-dir libs/
 ```
 
+Can use :
+
+```
+../../scripts/rebuild-sandbox.sh
+```
